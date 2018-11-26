@@ -53,7 +53,7 @@ module.exports = {
                 ]
             },
             { text: '侠客云官网', link: 'https://www.xky.com/' },
-            { text: 'GitHub', link: 'https://github.com/XKSoft/xkydoc' },
+            { text: 'GitHub', link: 'https://github.com/xksoft/guide' },
         ],
         sidebar: {
             '/guide/': [
