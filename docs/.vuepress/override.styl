@@ -1,0 +1,173 @@
+$accentColor = #2ea5ff
+
+.theme-container {
+    strong{
+        color #2c3e50
+    }
+    .content h1{
+        font-size30px
+        line-height30px
+    }
+
+    blockquote{
+        background-color rgba(255,229,100,0.3)
+        border-color #e7c000
+        color #525252
+        padding 0.3rem 1.5rem
+        border-left-width 0.5rem
+        border-left-style solid
+        margin 1rem 0
+    }
+    blockquote p {
+        margin 0
+        font-size 16px
+    }
+    blockquote p a{
+        font-weight 500
+        color #2ea5ff
+        text-decoration none !important
+    }
+    blockquote p a:hover {
+        text-decoration none
+    }
+    blockquote h1,blockquote h2{
+        // border-bottomnone
+        padding-bottom 0.3rem
+        border-bottom 1px solid #eaecef
+    }
+}
+
+.theme-container.home-page {
+    // .home .hero img {
+    //     max-height 80px
+
+    // }
+    // .home .hero h1{
+    //     font-size30px
+    // }
+
+    // .home .hero .description{
+    //     font-size 16px
+    //     color #2ea5ff
+    // }
+    // .home .hero h1, .home .hero .description, .home .hero .action{
+    //     margin 20px auto
+    // }
+
+    // .home .hero .action-button{
+    //     font-size 16px
+    //     padding 4px 10px
+    // }
+    // .home .feature h2 {
+    //     font-size 1.2rem
+    // }
+}
+
+// 自定义主页样式
+html,body,#app,.home-page{
+    height 100%
+}
+.theme-container.home-page{
+    display flex
+    flex-direction column
+    .custom-layout{
+        flex 1
+    }
+       
+}
+    
+
+.theme-container{
+    code {
+        color #e96900
+    }
+    // blockquote{
+    //     border-left-width 0
+    //     background-color #f8f8f8
+    //     border-color #f8f8f8
+    //     padding 1rem 1rem
+    //     margin 0
+    //     // blockquote{
+    //     //     padding0
+    //     // }
+    // }
+    div[class*="language-"]{
+        background-color #f8f8f8
+    }
+    // div[class*="language-"]:before{
+    //     color #ccc
+    // }
+    div[class~="language-html"]:before{
+        color #ccc
+        font-weight 600
+    }
+    div[class~="language-javascript"]:before{
+        color #ccc
+        font-weight 600
+    }
+    div[class~="language-json"]:before {
+        color #ccc
+        font-weight 600
+    }
+    div[class~="language-java"]:before {
+        color #ccc
+        font-weight 600
+    }
+     .content pre, .content pre[class*="language-"] {
+        background-color #f8f8f8
+        border-color #f8f8f8
+     }
+    .content pre code, .content pre[class*="language-"] code{
+       color #525252
+    }  
+} 
+
+.theme-container.tip-page{
+    blockquote{
+        background-color #f8f8f8
+        border-color#c1c1c1
+        padding 0.6rem 0.6rem
+        margin 0
+        blockquote{
+            background-color #f8f8f8
+            border-color #c1c1c1
+            padding 0.3rem 0.6rem
+            margin 10px
+        }
+    }
+    .h1,.h2,.h3,.h4,.h5,.h6{
+        padding-bottom 0.3em
+        margin-top 24px
+        margin-bottom 16px
+        font-weight 600
+        line-height 1.25
+    }
+    .h1{
+        font-size 2em
+        border-bottom 1px solid #eaecef
+    }
+    .h2{
+        font-size 1.5em
+        border-bottom 1px solid #eaecef
+    }
+    .h3{
+        font-size 1.25em
+    }
+    .h4{
+        font-size 1em
+    }
+    .h5{
+        font-size 0.875em
+    }
+    .h6{
+        font-size 0.85em
+    }
+    .custom-block.warning{
+        padding 0.3rem 1.5rem
+        p{
+            margin 0
+        }
+    }
+
+
+}

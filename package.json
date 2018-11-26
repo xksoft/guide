@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs && node upload.js"
+  },
+  "dependencies": {
+    "ali-oss": "^6.0.1"
+  }
+}
