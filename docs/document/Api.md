@@ -319,7 +319,7 @@ await xky.setClientClipboardText('剪贴板内容');
 
 * **用法：** `xky.findUiObjects(name, option)`
 * **说明：** 查找控件元素，控件元素id可配合xiakeyunuispy工具获取。
-* **参数：** 无
+* **参数：**
 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
