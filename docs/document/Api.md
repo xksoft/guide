@@ -822,14 +822,14 @@ await xky.downloadFile("wedata/6406.tar", "/sdcard/xbak/6406.tar");
 
 ## writeString
 
-* **用法：** `xky.writeString(filepath,content)`
+* **用法：** `xky.writeString(key,value)`
 * **说明：** 将字符串上传到云端网盘
 * **参数：** 
 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
-filepath| string| 网盘上的路径
-content| string| 文本内容
+key| string| 网盘上的路径
+value| string| 文本内容
 
 例子：
 ```javascript
@@ -839,20 +839,20 @@ await xky.writeString("wedata/6406.txt", "我是一个字符串");
 ```javascript
 {
   errcode: 0,
-  name: "/sdcard/xbak/6406.txt" //保存路径
+  key: "/sdcard/xbak/6406.txt" //保存路径
 }
 ```
 > 路径是相对于云端网盘的路径，字符串编码都是utf8
 
 ## readString
 
-* **用法：** `xky.readString(filepath)`
+* **用法：** `xky.readString(key)`
 * **说明：** 从侠客云端网盘读取一个字符串
 * **参数：** 
 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
-filepath| string| 网盘上的路径
+key| string| 网盘上的路径
 
 例子：
 ```javascript
@@ -869,13 +869,13 @@ await xky.readString("wedata/6406.txt");
 
 ## delString
 
-* **用法：** `xky.delString(filepath)`
+* **用法：** `xky.delString(key)`
 * **说明：** 从侠客云端网盘删除一个字符串
 * **参数：** 
 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
-filepath| string| 网盘上的路径
+key| string| 网盘上的路径
 
 例子：
 ```javascript
