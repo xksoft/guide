@@ -774,6 +774,30 @@ await xky.delAppSnapshot("com.tencent.mm","all");//删除所有
 { errcode: 0, msg: "快照删除成功"}
 ```
 
+
+
+## uploadBase64
+
+* **用法：** `xky.uploadBase64(base64,savepath)`
+* **说明：** 上传一个base64到云端网盘
+* **参数：** 
+参数 | 值类型 | 说明
+------------ | ------------- | -------------
+base64| string| 文件在手机上的路径
+savepath| string| 文件在网盘里的路径
+
+例子：
+```javascript
+await xky.uploadBase64("aaa.jpb", "base64代码");
+```
+返回结果：
+```javascript
+{
+  errcode: 0,
+  name: "files/anj68vkk9tqmmxb38myg/wedata/6406.tar"  // 网盘路径
+}
+```
+
 ## uploadFile
 
 * **用法：** `xky.uploadFile(filepath,savepath)`
@@ -781,7 +805,7 @@ await xky.delAppSnapshot("com.tencent.mm","all");//删除所有
 * **参数：** 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
-filepath| string| 文件在手机上的路径(如果filepath是一个base64字符串，则直接解析成Buffer上传)
+filepath| string| 文件在手机上的路径
 savepath| string| 文件在网盘里的路径
 
 例子：
