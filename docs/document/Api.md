@@ -781,7 +781,7 @@ await xky.delAppSnapshot("com.tencent.mm","all");//删除所有
 * **参数：** 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
-filepath| string| 文件在手机上的路径
+filepath| string| 文件在手机上的路径(如果filepath是一个base64字符串，则直接解析成Buffer上传)
 savepath| string| 文件在网盘里的路径
 
 例子：
