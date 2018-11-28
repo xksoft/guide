@@ -774,7 +774,62 @@ await xky.delAppSnapshot("com.tencent.mm","all");//删除所有
 { errcode: 0, msg: "快照删除成功"}
 ```
 
+## updateCameraFromUrl
 
+* **用法：** `xky.updateCameraFromUrl(url)`
+* **说明：** 将一个远程图片更新到摄像头
+* **参数：** 
+参数 | 值类型 | 说明
+------------ | ------------- | -------------
+url| string| 图片文件url路径
+
+
+例子：
+```javascript
+await xky.updateCameraFromUrl("https://www.xky.com/static/main/img/weixin.jpg");
+```
+返回结果：
+```javascript
+{errcode: 0, msg: "写入完毕"}
+```
+
+## updateCameraFromText
+
+* **用法：** `xky.updateCameraFromText(text)`
+* **说明：** 基于文本生成一个二维码，并提交到摄像头
+* **参数：** 
+参数 | 值类型 | 说明
+------------ | ------------- | -------------
+text| string| 文本
+
+
+例子：
+```javascript
+await xky.updateCameraFromText("123123");
+```
+返回结果：
+```javascript
+{errcode: 0, msg: "写入完毕"}
+```
+
+## updateCameraFromFile
+
+* **用法：** `xky.updateCameraFromFile(base64)`
+* **说明：** 将一个本地图片提交到摄像头
+* **参数：** 
+参数 | 值类型 | 说明
+------------ | ------------- | -------------
+base64| string| 图片文件的base64代码
+
+
+例子：
+```javascript
+await xky.updateCameraFromFile("/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wgARCAAPAA8DASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEG/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAd4hP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCH//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMBAT8Bf//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIBAT8Bf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CH//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAT8hH//aAAwDAQACAAMAAAAQP//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMBAT8Qf//EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQIBAT8Qf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAT8QH//Z");
+```
+返回结果：
+```javascript
+{errcode: 0, msg: "写入完毕"}
+```
 
 ## uploadBase64
 
