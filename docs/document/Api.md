@@ -600,9 +600,9 @@ await xky.sendEditorAction(4);//发送
 ```
 
 ## createHardware
-
+>本API仅限侠客云机可用
 * **用法：** `xky.createHardware(model)`
-* **说明：** 创建一个全息硬件信息，仅侠客云矿机可用。
+* **说明：** 创建一个全息硬件信息。
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -624,9 +624,9 @@ await xky.createHardware('nexus6');//生成一个nexus6的硬件全息信息
 
 
 ## getHardwareKey
-
+>本API仅限侠客云机可用
 * **用法：** `xky.getHardwareKey()`
-* **说明：** 获取当前设备的硬件全息KEY，仅侠客云矿机可用。
+* **说明：** 获取当前设备的硬件全息KEY。
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -647,9 +647,9 @@ await xky.getHardwareKey();
 
 
 ## restoreHardware
-
+>本API仅限侠客云机可用
 * **用法：** `xky.restoreHardware(key)`
-* **说明：** 还原一个全息硬件信息，仅侠客云矿机可用。
+* **说明：** 还原一个全息硬件信息。
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -670,9 +670,9 @@ await xky.restoreHardware('c009047c');//还原key=c009047c的硬件全息信息
 ```
 
 ## createAppSnapshot
-
+>本API仅限侠客云机可用
 * **用法：** `xky.createAppSnapshot(packName,name)`
-* **说明：**  创建一个APP的全息快照插座，仅侠客云矿机可用。
+* **说明：**  创建一个APP的全息快照插座。
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -692,9 +692,9 @@ await xky.createAppSnapshot( "com.tencent.mm","01");
 >注意，每次创建新的快照插座，都会清空当前app所有数据，每次创建都会生成一个新的硬件全息信息
 
 ## setAppSnapshot
-
+>本API仅限侠客云机可用
 * **用法：** `xky.setAppSnapshot(packName,name)`
-* **说明：**  切换一个APP的全息快照插座，仅侠客云矿机可用。
+* **说明：**  切换一个APP的全息快照插座。
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -713,9 +713,9 @@ await xky.setAppSnapshot( "com.tencent.mm","01");
 ```
 
 ## getCurrentAppSnapshot
-
+>本API仅限侠客云机可用
 * **用法：** `xky.getCurrentAppSnapshot(packName)`
-* **说明：**  获取当前APP的全息快照插座信息，仅侠客云矿机可用。
+* **说明：**  获取当前APP的全息快照插座信息。
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -733,9 +733,9 @@ await xky.getCurrentAppSnapshot( "com.tencent.mm");
 ```
 
 ## getAppSnapshotList
-   
+   >本API仅限侠客云机可用
    * **用法：** `xky.getAppSnapshotList(packName)`
-   * **说明：**  获取当前APP的全息快照插座列表信息，仅侠客云矿机可用。
+   * **说明：**  获取当前APP的全息快照插座列表信息。
    * **参数：** 
    
    参数 | 值类型 | 说明
@@ -753,9 +753,9 @@ await xky.getCurrentAppSnapshot( "com.tencent.mm");
    ```
 
 ## delAppSnapshot
-
+>本API仅限侠客云机可用
 * **用法：** `xky.delAppSnapshot(packName,name)`
-* **说明：**  删除指定的快照，仅侠客云矿机可用。
+* **说明：**  删除指定的快照。
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -775,7 +775,7 @@ await xky.delAppSnapshot("com.tencent.mm","all");//删除所有
 ```
 
 ## updateCameraFromUrl
-
+>本API仅限侠客云机可用
 * **用法：** `xky.updateCameraFromUrl(url)`
 * **说明：** 将一个远程图片更新到摄像头
 * **参数：** 
@@ -795,7 +795,7 @@ await xky.updateCameraFromUrl("https://www.xky.com/static/main/img/weixin.jpg");
 ```
 
 ## updateCameraFromText
-
+>本API仅限侠客云机可用
 * **用法：** `xky.updateCameraFromText(text)`
 * **说明：** 基于文本生成一个二维码，并提交到摄像头
 * **参数：** 
@@ -815,7 +815,7 @@ await xky.updateCameraFromText("123123");
 ```
 
 ## updateCameraFromFile
-
+>本API仅限侠客云机可用
 * **用法：** `xky.updateCameraFromFile(base64)`
 * **说明：** 将一个本地图片提交到摄像头
 * **参数：** 
