@@ -779,6 +779,7 @@ await xky.delAppSnapshot("com.tencent.mm","all");//删除所有
 * **用法：** `xky.updateCameraFromUrl(url)`
 * **说明：** 将一个远程图片更新到摄像头
 * **参数：** 
+
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
 url| string| 图片文件url路径
@@ -798,6 +799,7 @@ await xky.updateCameraFromUrl("https://www.xky.com/static/main/img/weixin.jpg");
 * **用法：** `xky.updateCameraFromText(text)`
 * **说明：** 基于文本生成一个二维码，并提交到摄像头
 * **参数：** 
+
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
 text| string| 文本
@@ -817,6 +819,7 @@ await xky.updateCameraFromText("123123");
 * **用法：** `xky.updateCameraFromFile(base64)`
 * **说明：** 将一个本地图片提交到摄像头
 * **参数：** 
+
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
 base64| string| 图片文件的base64代码
@@ -836,6 +839,7 @@ await xky.updateCameraFromFile("/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJ
 * **用法：** `xky.uploadBase64(base64,savepath)`
 * **说明：** 上传一个base64到云端网盘
 * **参数：** 
+
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
 base64| string| 文件在手机上的路径
@@ -858,6 +862,7 @@ await xky.uploadBase64("aaa.jpb", "base64代码");
 * **用法：** `xky.uploadFile(filepath,savepath)`
 * **说明：** 上传一个文件到云端网盘
 * **参数：** 
+
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
 filepath| string| 文件在手机上的路径
