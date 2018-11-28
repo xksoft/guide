@@ -580,6 +580,27 @@ await xky.installApkFromUrl('http://dldir1.qq.com/weixin/android/weixin667androi
 {errcode: 0, result: "apk安装完成"}
 ```
 
+## installApkFromCloud
+
+* **用法：** `xky.installApkFromCloud(file_path,newdown)`
+* **说明：** 从url地址安装apk
+* **参数：** 
+
+参数 | 值类型 | 说明
+------------ | ------------- | -------------
+file_path| string| 侠客云盘的相对路径
+newdown| bool| 可选 默认否 表示是否全新下载（否则如果有缓存文件，则直接用缓存文件安装）。
+
+例子：
+```javascript
+//安装微信667
+await xky.installApkFromCloud('apk/weixin.apk');
+```
+返回结果：
+```javascript
+{errcode: 0, result: "apk安装完成"}
+```
+
 ## sendEditorAction
 
 * **用法：** `xky.sendEditorAction(code)`
