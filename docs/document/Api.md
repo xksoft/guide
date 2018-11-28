@@ -494,7 +494,7 @@ await xky.input('无敌最寂寞');
 
 例子：
 ```javascript
-await xky.showInputMethod(});
+await xky.showInputMethod();
 ```
 返回结果：
 ```javascript
