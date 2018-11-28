@@ -5,8 +5,8 @@
 ## 配置工程
 
 1. 打开 **Android Studio** 并创建一个工程
-2. 先下载 [god.jar](https://guide.xky.com/god.jar)，然后将 **god.jar** 放入 **libs** 目录中
-3. 以 **compileOnly** 的方式将 **god.jar** 引入工程
+2. 先下载 [god-api.jar](https://guide.xky.com/god-api.jar)，然后将 **god-api.jar** 放入 **libs** 目录中
+3. 以 **compileOnly** 的方式将 **god-api.jar** 引入工程
 4. 创建一个类并让它实现 **IXposedHookLoadPackage** 接口，例如：
 
 ```java
@@ -75,3 +75,13 @@ public void handleLoadPackage(final XC_LoadPackage.LoadPackageParam loadPackageP
 ```
 XposedHelpers.setStaticObjectField(Build.class,"MODEL","Hooked!");
 ```
+
+## 与Xposed用法上的差异
+
+在God框架中，XposedBridge类被GodBridge类取代，例如用GodBridge打印一条日志：
+
+```java
+GodBridge.log("I'm God.");
+```
+
+
