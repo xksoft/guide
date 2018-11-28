@@ -583,7 +583,7 @@ await xky.installApkFromUrl('http://dldir1.qq.com/weixin/android/weixin667androi
 ## installApkFromCloud
 
 * **用法：** `xky.installApkFromCloud(file_path,newdown)`
-* **说明：** 从url地址安装apk
+* **说明：** 从侠客云盘安装apk
 * **参数：** 
 
 参数 | 值类型 | 说明
