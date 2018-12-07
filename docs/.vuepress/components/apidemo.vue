@@ -48,13 +48,13 @@
             Prism
         },
         created(){
-            if(getCookie('mysession')){
-                let json = JSON.parse(this.params)
-                if("session" in json){
-                    json.session = getCookie('mysession')
-                }
-                this.requestjson = JSON.stringify(json, null, 4)
-            }
+            // if(getCookie('mysession')){
+            //     let json = JSON.parse(this.params)
+            //     if("session" in json){
+            //         json.session = getCookie('mysession')
+            //     }
+            //     this.requestjson = JSON.stringify(json, null, 4)
+            // }
         },
         computed:{
             highlightCode:function(){
@@ -79,7 +79,7 @@
                         if (response.data.session) {
                             console.log(response.data.session)
                             this.session = response.data.session
-                            setCookie('mysession', this.session, 365)
+                            // setCookie('mysession', this.session, 365)
                         }
                     }
                     this.socketio_response = JSON.stringify(response.data, null, 4)
@@ -131,27 +131,27 @@
         console.log('get');
         return await axios.get(api , {params:json})
     }
-    function setCookie(c_name, value, expiredays) {
-        let exdate = new Date();
-        exdate.setDate(exdate.getDate() + expiredays);
-        document.cookie = c_name + '=' + escape(value) +
-            ((expiredays == null) ? '' : ';expires=' + exdate.toGMTString());
-    }
-
-    function getCookie(c_name) {
-        if (document.cookie.length > 0) {
-            let c_start = document.cookie.indexOf(c_name + '=');
-            if (c_start != -1) {
-                c_start = c_start + c_name.length + 1;
-                let c_end = document.cookie.indexOf(';', c_start);
-                if (c_end == -1) {
-                    c_end = document.cookie.length;
-                }
-                return unescape(document.cookie.substring(c_start, c_end));
-            }
-        }
-        return '';
-    }
+    // function setCookie(c_name, value, expiredays) {
+    //     let exdate = new Date();
+    //     exdate.setDate(exdate.getDate() + expiredays);
+    //     document.cookie = c_name + '=' + escape(value) +
+    //         ((expiredays == null) ? '' : ';expires=' + exdate.toGMTString());
+    // }
+    //
+    // function getCookie(c_name) {
+    //     if (document.cookie.length > 0) {
+    //         let c_start = document.cookie.indexOf(c_name + '=');
+    //         if (c_start != -1) {
+    //             c_start = c_start + c_name.length + 1;
+    //             let c_end = document.cookie.indexOf(';', c_start);
+    //             if (c_end == -1) {
+    //                 c_end = document.cookie.length;
+    //             }
+    //             return unescape(document.cookie.substring(c_start, c_end));
+    //         }
+    //     }
+    //     return '';
+    // }
 </script>
 
 <style scoped>
