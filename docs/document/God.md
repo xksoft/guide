@@ -57,7 +57,7 @@ public void handleLoadPackage(final XC_LoadPackage.LoadPackageParam loadPackageP
     });
 }
 ```
-在上面的例子中， **findAndHookMethod** 方法将 **Hook WelcomeActivity** 类的 **onCreate** 方法。 **findAndHookMethod** 方法的第3个参数是 **Bundle.class** ，表明我们 **Hook** 的 **onCreate** 方法它有一个参数，这个参数的类型是 **Bundle** 。
+在上面的例子中， **findAndHookMethod** 方法将 **Hook WelcomeActivity** 类的 **onCreate** 方法。 **findAndHookMethod** 方法的第3个参数是 **Bundle.class** ，表明我们 **Hook** 的 **onCreate** 方法它有一个参数，这个参数的类型是 **Bundle**(如果要Hook的方法有多个参数，把它的参数类型**依次**写上)。
 
 **findAndHookMethod** 最后一个参数是方法的回调，我们可以在方法被 **Hook** 前和 **Hook** 后做一些事情：
 
