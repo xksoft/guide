@@ -1,9 +1,13 @@
 {
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs && node upload.js"
+    "docs:build": "vuepress build docs",
+    "docs:upload": "vuepress build docs && node upload.js"
   },
   "dependencies": {
-    "ali-oss": "^6.0.1"
+    "ali-oss": "^6.0.1",
+    "axios": "^0.18.0",
+    "codemirror": "^5.42.0",
+    "element-ui": "^2.4.11"
   }
 }

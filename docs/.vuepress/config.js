@@ -29,17 +29,18 @@ module.exports = {
                     {
                         text: 'API参考',
                         items: [
-                            { text: '侠客云API', link: '/document/Api.html' },
+                            { text: '模块API', link: '/api/ModuleApi.html' },
+                            { text: '客户端API', link: '/api/ClientApi.html' },
                         ]
                     },
                     {
                         text: '其他',
                         items: [
-                            { text: '模块参数配置', link: '/document/Module.html' },
-                            { text: '第三方模块接口', link: '/document/Third.html' },
-                            { text: 'God框架的用法', link: '/document/God.html' },
-                            { text: '安卓按键对应keycode', link: '/document/Keycode.html' },
-                            { text: '安卓输入法动作代码', link: '/document/Input.html' },
+                            { text: '模块参数配置', link: '/api/Module.html' },
+                            { text: '第三方模块接口', link: '/api/Third.html' },
+                            { text: 'God框架的用法', link: '/api/God.html' },
+                            { text: '安卓按键对应keycode', link: '/api/Keycode.html' },
+                            { text: '安卓输入法动作代码', link: '/api/Input.html' },
 
                         ]
                     }
@@ -72,12 +73,14 @@ module.exports = {
                 //   ]
                 // },
             ],
-            '/document/': [
+            '/api/': [
                 {
                     title: 'API参考',
                     collapsable: false,
                     children:[
-                        'Api',
+                        'ModuleApi',
+                        'ClientApi'
+
                     ]
                 },
                 {

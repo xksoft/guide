@@ -5,7 +5,7 @@ pageClass: module-page
 # 模块参数配置
 参数args是一个每一项都是由一个对象组成的数组。可以接受 `string` , `textarea` , `checkbox` , `radio` , `select` , `file` 等类型，格式为：
 
-```
+```javascript
 [
     {
       "title" : "项目标题",
@@ -33,7 +33,7 @@ pageClass: module-page
 ```
 ## 参数例子
 
-```
+```javascript
 [
   {
     "title": "字符串",

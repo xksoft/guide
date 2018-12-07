@@ -58,4 +58,4 @@ pageClass: third-page
         setContentView(R.layout.activity_main);
     }
 ```
-侠客云模块中调用方法可参考[callApi调用第三方模块接口](/document/Api.html#callapi)。
+侠客云模块中调用方法可参考[callApi调用第三方模块接口](/api/ModuleApi.html#callapi)。

@@ -2,7 +2,7 @@
 pageClass: api-page
 ---
 
-# 侠客云API
+# 模块API
 所有api均属于xky这个对象下，api文档随时增删，请留意查看。
 
 ## adbCommand    
@@ -199,12 +199,12 @@ await xky.wheel(0.5,0.5,-2);//往下滚动-2个位置
 ## pressKey
 
 * **用法：** `xky.pressKey(key)`
-* **说明：** 按下某个按键，更多请参考[安卓按键对应keycode](/document/Keycode.html)。
+* **说明：** 按下某个按键，更多请参考[安卓按键对应keycode](/api/Keycode.html)。
 * **参数：** 
 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
-key| int | 按键代码 [安卓按键代码参考](/document/Keycode.html)
+key| int | 按键代码 [安卓按键代码参考](/api/Keycode.html)
 
 例子：
 ```javascript
@@ -219,7 +219,7 @@ await xky.pressKey(3);//按下home键
 ## setClipboardText
 
 * **用法：** `xky.setClipboardText(value)`
-* **说明：** 设置剪贴板内容
+* **说明：** 设置手机上的剪贴板内容
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -299,7 +299,7 @@ await xky.paste();
 ## setClientClipboardText
 
 * **用法：** `xky.setClientClipboardText(value)`
-* **说明：** 设置客户端剪贴板
+* **说明：** 设置客户端(pc)上的剪贴板内容
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -449,7 +449,7 @@ await xky.clearApp('com.tencent.mm');//清空微信所有数据
 ## callApi
 
 * **用法：** `xky.callApi(pkname,action,json)`
-* **说明：** 调用第三方接口Api，更多请参考[调用第三方接口Api开发文档](/document/Third.html)。
+* **说明：** 调用第三方接口Api，更多请参考[调用第三方接口Api开发文档](/api/Third.html)。
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -604,12 +604,12 @@ await xky.installApkFromCloud('apk/weixin.apk');
 ## sendEditorAction
 
 * **用法：** `xky.sendEditorAction(code)`
-* **说明：** 参考[安卓输入法动作代码](/document/Input.html)，执行输入法动作指令。
+* **说明：** 参考[安卓输入法动作代码](/api/Input.html)，执行输入法动作指令。
 * **参数：** 
 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
-code| int| 动作编号 [输入法动作参考](/document/Input.html)
+code| int| 动作编号 [输入法动作参考](/api/Input.html)
 
 例子：
 ```javascript
