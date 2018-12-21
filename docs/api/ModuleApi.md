@@ -1062,10 +1062,10 @@ await xky.clearContacts();
 {errcode: 0, msg: "清空联系人完毕"}
 ```
 
-## insertImage
+## insertMedia
 
-* **用法：** `xky.insertImage(path)`
-* **说明：** 添加图片到系统图库
+* **用法：** `xky.insertMedia(path)`
+* **说明：** 添加媒体文件到系统图库
 * **参数：** 
 
 参数 | 值类型 | 说明
@@ -1074,7 +1074,7 @@ path| string| 图片、视频在手机上的路径
 
 例子：
 ```javascript
-  let aaa = await xky.insertImage("/sdcard/aaa.jpg");
+  let aaa = await xky.insertMedia("/sdcard/aaa.jpg");
 ```
 返回结果：
 ```javascript
