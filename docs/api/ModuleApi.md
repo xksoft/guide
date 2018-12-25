@@ -24,6 +24,27 @@ await xky.adbCommand('shell ls');
 {errcode: 0, result: "结果"}
 ```
 
+
+## adbShell    
+* **用法：** `xky.adbShell(command)`
+* **说明：** 执行adb shell指令。
+* **参数：** 
+>该api与adbCommand很相似，但这里实在手机内部执行，无需带上shell指令，而adbCommand相当于在节点服务器上执行adb shell 指令
+
+参数 | 值类型 | 说明
+------------ | ------------- | -------------
+command| string | adb指令
+
+例子：
+```javascript
+// adb指令可以是任意adb命令例如 adb shell ls
+await xky.adbShell('ls');
+```
+返回结果：
+```javascript
+{errcode: 0, result: "结果"}
+```
+
 ## toast
 
 * **用法：** `xky.toast(toast)`
