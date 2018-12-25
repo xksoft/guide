@@ -70,50 +70,53 @@ async function log(xky, args) {
 ```javascript
 [
   {
-    "title": "字符串",
+    "title": "input box",
     "name": "string_name",
     "type": "string",
-    "default": "我是字符串"
+    "default": "I am a string"
   },
   {
-    "title": "文本框",
+    "title": "text box",
     "name": "textarea_name",
-    "type": "textarea"
+    "type": "textarea",
+    "default": "I am a textarea"
   },
   {
-    "title": "布尔值",
+    "title": "Boolean value",
     "name": "boolean_name",
-    "type": "boolean"
+    "type": "boolean",
+    "default": false
   },
   {
-    "title": "多选多",
+    "title": "Multiple choices",
     "name": "checkbox_name",
     "type": "checkbox",
     "values": ["选项一", "选项二", "选项三", "选项四"],
     "default": [0, 3]
   },
   {
-    "title": "多选一",
+    "title": "Radio",
     "name": "radio_name",
     "type": "radio",
-    "values": ["选项一", "选项二", "选项三", "选项四"]
+    "values": ["选项一", "选项二", "选项三", "选项四"],
+    "default":0
   },
   {
-    "title": "多选一 (select)",
+    "title": "Select",
     "name": "select_name",
     "type": "select",
     "values": ["选项一", "选项二", "选项三", "选项四"],
     "default": 3
   },
   {
-    "title": "选择文本文件",
+    "title": "Select text file",
     "name": "files_name",
     "type": "file",
     "file": {
       "accept": [".txt"],
       "multiple": true
     }
-  },
+  }
 ]
 ```
 
@@ -121,13 +124,13 @@ async function log(xky, args) {
 
 ```json
 {
-  "string_name": value,
-  "textarea_name": value,
-  "boolean_name": value, // false/true
-  "checkbox_name": [value], // checkbox返回的是一个数组
-  "radio_name": value
-  "select_name": value
-  "files_name":[value] // 文件类型返回的是一个数组
+  "string_name": "I am a string",
+  "textarea_name": "I am a textarea",
+  "boolean_name": false,
+  "checkbox_name": ["选项一", "选项四"], // checkbox返回的是一个数组
+  "radio_name": "选项一"
+  "select_name":"选项四",
+  "files_name":[] // 文件类型返回的是一个数组
   //...
 }
 ```
