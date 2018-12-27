@@ -25,10 +25,10 @@ await xky.adbCommand('shell ls');
 ```
 
 ## adbShell
+>该api与adbCommand很相似，但这里是在手机内部执行，无需带上shell指令，而adbCommand相当于在节点服务器上执行adb shell 指令
 * **用法：** `xky.adbShell(command)`
 * **说明：** 执行adb shell指令。
 * **参数：**
->该api与adbCommand很相似，但这里实在手机内部执行，无需带上shell指令，而adbCommand相当于在节点服务器上执行adb shell 指令
 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------

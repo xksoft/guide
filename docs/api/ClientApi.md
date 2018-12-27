@@ -476,7 +476,7 @@ params='{
 ## setDevDevice
 * **方法：** `post`
 * **UPL：** `https://api.xky.com/set_dev_device`
-* **说明：** 设置为默认的调式设备
+* **说明：** 设置为默认的调试设备
 * **参数：**
 
 参数 | 值类型 | 说明
