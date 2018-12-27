@@ -1,0 +1,17 @@
+# Android Input Code
+
+Code | Action | Description
+------------ | ------------- | -------------
+255|IME_MASK_ACTION|Unknown
+0|IME_ACTION_UNSPECIFIED|Unknown
+1|IME_ACTION_NONE|No action?
+2|IME_ACTION_GO|go Forward
+3|IME_ACTION_SEARCH|search
+4|IME_ACTION_SEND|Send
+5|IME_ACTION_NEXT|Next
+6|IME_ACTION_DONE|Complete
+7|IME_ACTION_PREVIOUS|Previous
+16777216|IME_FLAG_NO_PERSONALIZED_LEARNING|Unknown
+33554432|IME_FLAG_NO_FULLSCREEN|Do not full screen?
+67108864|IME_FLAG_NAVIGATE_PREVIOUS|Navigation back?
+134217728|IME_FLAG_NAVIGATE_NEXT|Navigation forward
