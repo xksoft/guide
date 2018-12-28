@@ -33,8 +33,10 @@ module.exports = {
     },
     themeConfig: {
         // displayAllHeaders: true,// 默认值：false
-        // docsDir: 'docs',
         // sidebarDepth: 2,
+        repo: 'XKSoft/guide',
+        // repoLabel: 'Github',
+        docsDir: 'docs',
         editLinks: true,
         locales: {
             '/': {
@@ -43,6 +45,7 @@ module.exports = {
                 // 该语言在下拉菜单中的标签
                 label: '简体中文',
                 // 编辑链接文字
+                lastUpdated: '上次更新',
                 editLinkText: '在 GitHub 上编辑此页',
                 // Service Worker 的配置
                 serviceWorker: {
@@ -86,7 +89,7 @@ module.exports = {
                         ]
                     },
                     { text: '侠客云官网', link: 'https://www.xky.com/' },
-                    { text: 'GitHub', link: 'https://github.com/xksoft/guide' },
+                    // { text: 'GitHub', link: 'https://github.com/xksoft/guide' },
                 ],
                 sidebar: {
                     '/guide/': [
@@ -136,6 +139,7 @@ module.exports = {
                 selectText: 'Languages',
                 label: 'English',
                 editLinkText: 'Edit this page on GitHub',
+                lastUpdated: 'Last Updated',
                 serviceWorker: {
                     updatePopup: {
                         message: "New content is available.",
@@ -176,7 +180,7 @@ module.exports = {
                         ]
                     },
                     { text: 'Official Website', link: 'https://www.xky.com/' },
-                    { text: 'GitHub', link: 'https://github.com/xksoft/guide' },
+                    // { text: 'GitHub', link: 'https://github.com/xksoft/guide' },
                 ],
                 sidebar: {
                     '/en/guide/': [
