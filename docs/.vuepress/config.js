@@ -21,13 +21,13 @@ module.exports = {
         // 键名是该语言所属的子路径
         // 作为特例，默认语言可以使用 '/' 作为其路径。
         '/': {
-            lang: '侠客云开发文档',
-            title: '侠客出品，必属精品',
-            description: 'Vue 驱动的静态网站生成器'
+            lang: 'zh-CN',
+            title: '侠客云开发文档',
+            description: '侠客出品，必属精品'
         },
         '/en/': {
             lang: 'en-US', // 将会被设置为 <html> 的 lang 属性
-            title: 'XiakeCloud',
+            title: 'XiakeCloud Guid',
             description: 'Produced by the Xiake, it must be a boutique.'
         }
     },
@@ -35,6 +35,7 @@ module.exports = {
         // displayAllHeaders: true,// 默认值：false
         // docsDir: 'docs',
         // sidebarDepth: 2,
+        editLinks: true,
         locales: {
             '/': {
                 // 多语言下拉菜单的标题
