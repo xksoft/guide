@@ -22,7 +22,7 @@
 <script>
     import axios from 'axios'
     import Prism from 'prismjs'
-    import 'prismjs/themes/prism-tomorrow.css'
+    import 'prismjs/themes/prism.css'
 
     export default {
         name: "apidemo",
@@ -160,14 +160,17 @@
         width: 100%;
         box-sizing: border-box;
         padding: 15px;
-        /*background: #f8f8f8;*/
-        border-radius: 4px;
-        border-color: #f8f8f8;
-        color: #7ec699;
+        background: #f5f2f0;
+        /*border-radius: 4px;*/
+        border-color:  #f5f2f0;
+        color: #690;
         line-height: 1.5;
         font-size: 14px;
         min-height: 180px;
         max-height: 300px;
+    }
+    textarea:focus{
+        outline-color: #2ea5ff;
     }
     .demotext{
         /*background-color: #f8f8f8;*/

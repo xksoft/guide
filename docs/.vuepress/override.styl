@@ -54,38 +54,10 @@ $accentColor = #2ea5ff
     }
 
 }
-//.theme-container.clientapi-page{
-//
-//    pre.CodeMirror-line{
-//         font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-//     }
-//
-//}
+
 
 .theme-container.home-page {
-    // .home .hero img {
-    //     max-height 80px
 
-    // }
-    // .home .hero h1{
-    //     font-size30px
-    // }
-
-    // .home .hero .description{
-    //     font-size 16px
-    //     color #2ea5ff
-    // }
-    // .home .hero h1, .home .hero .description, .home .hero .action{
-    //     margin 20px auto
-    // }
-
-    // .home .hero .action-button{
-    //     font-size 16px
-    //     padding 4px 10px
-    // }
-    // .home .feature h2 {
-    //     font-size 1.2rem
-    // }
 }
 
 // 自定义主页样式
@@ -103,48 +75,19 @@ html,body,#app,.home-page{
     
 
 .theme-container{
-    code {
-        color #e96900
+    div[class*="language-"] {
+        background-color: #f5f2f0;
+        border-radius: 6px;
     }
-    // blockquote{
-    //     border-left-width 0
-    //     background-color #f8f8f8
-    //     border-color #f8f8f8
-    //     padding 1rem 1rem
-    //     margin 0
-    //     // blockquote{
-    //     //     padding0
-    //     // }
-    // }
-    div[class*="language-"]{
-        background-color #f8f8f8
+    .content pre code, .content pre[class*="language-"] code {
+        color: black !important;
     }
-    // div[class*="language-"]:before{
-    //     color #ccc
-    // }
-    div[class~="language-html"]:before{
-        color #ccc
-        font-weight 600
+    :not(pre) > code[class*="language-"], pre[class*="language-"] {
+        background: #f5f2f0 !important;
     }
-    div[class~="language-javascript"]:before{
-        color #ccc
-        font-weight 600
+    div[class*="language-"]:before {
+        color: black;
     }
-    div[class~="language-json"]:before {
-        color #ccc
-        font-weight 600
-    }
-    div[class~="language-java"]:before {
-        color #ccc
-        font-weight 600
-    }
-     .content pre, .content pre[class*="language-"] {
-        background-color #f8f8f8
-        border-color #f8f8f8
-     }
-    .content pre code, .content pre[class*="language-"] code{
-       color #525252
-    }  
 } 
 
 .theme-container.tip-page{
