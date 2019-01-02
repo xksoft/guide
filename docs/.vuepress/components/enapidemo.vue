@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-tabs v-model="activeName" @tab-click="getreturn()">
-            <el-tab-pane label="参  数" name="first">
+            <el-tab-pane label="Parameter" name="first">
                 <div>
                     <el-input
                             type="textarea"
@@ -11,7 +11,7 @@
                     </el-input>
                 </div>
             </el-tab-pane>
-            <el-tab-pane label="运行结果" name="second">
+            <el-tab-pane label="Result" name="second">
                 <div class="language-javascript extra-class demotext">
                     <pre><code v-html="highlightCode"></code></pre>
                 </div>
@@ -27,7 +27,7 @@
     import 'prismjs/themes/prism.css'
 
     export default {
-        name: "apidemo",
+        name: "enapidemo",
         props: ['url','params','isget'],
         data(){
             return{

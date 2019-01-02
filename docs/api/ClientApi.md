@@ -18,8 +18,9 @@ subaccount | string | 分控账号，可选参数，可不填，不填时则登�
 password | string | 登录的密码
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo1">
 <apidemo
 url="https://api.xky.com/login"
 params='{
@@ -31,6 +32,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## logout
 * **方法：** `post`
@@ -43,8 +45,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo2">
 <apidemo
 url="https://api.xky.com/logout"
 params='{
@@ -53,6 +56,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## addSubaccount
 * **方法：** `post`
@@ -68,8 +72,9 @@ description | string | 备注
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo3">
 <apidemo
 url="https://api.xky.com/add_subaccount"
 params='{
@@ -81,6 +86,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## getSubaccountList
 * **方法：** `get`
@@ -93,8 +99,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo4">
 <apidemo
 url="https://api.xky.com/get_subaccount_list"
 params='{
@@ -103,6 +110,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## getSubaccount
 * **方法：** `get`
@@ -116,8 +124,9 @@ id | string | 分控账号的id，可在分控账号列表里获取
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo5">
 <apidemo
 url="https://api.xky.com/get_subaccount"
 params='{
@@ -127,6 +136,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## setSubaccount
 * **方法：** `post`
@@ -143,8 +153,9 @@ devices | array | 可操控的设备的序列号数组，可在我的设备列�
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo6">
 <apidemo
 url="https://api.xky.com/set_subaccount"
 params='{
@@ -160,6 +171,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## deleteSubaccount
 * **方法：** `get`
@@ -173,8 +185,9 @@ id | string | 分控账号的id，可在分控账号列表里获取
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo7">
 <apidemo
 url="https://api.xky.com/delete_subaccount"
 params='{
@@ -184,6 +197,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 
 ## getTempSession
@@ -197,8 +211,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo8">
 <apidemo
 url="https://api.xky.com/get_temp_session"
 params='{
@@ -207,6 +222,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## getUser
 * **方法：** `get`
@@ -219,8 +235,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo9">
 <apidemo
 url="https://api.xky.com/get_user"
 params='{
@@ -229,6 +246,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## addNode
 * **方法：** `post`
@@ -243,8 +261,9 @@ name | string | 节点服务器的名称
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo10">
 <apidemo
 url="https://api.xky.com/add_node"
 params='{
@@ -255,6 +274,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## getNodeList
 * **方法：** `get`
@@ -267,8 +287,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo11">
 <apidemo
 url="https://api.xky.com/get_node_list"
 params='{
@@ -277,6 +298,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## setNode
 * **方法：** `post`
@@ -291,8 +313,9 @@ name | string | 节点服务器的名称
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo12">
 <apidemo
 url="https://api.xky.com/set_node"
 params='{
@@ -303,6 +326,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## delNode
 * **方法：** `post`
@@ -316,8 +340,9 @@ params='{
  session | string | 登录标识，在登录接口获取
  source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo13">
 <apidemo
 url="https://api.xky.com/del_node"
 params='{
@@ -327,6 +352,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## getDeviceList
 * **方法：** `get`
@@ -339,8 +365,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo14">
 <apidemo
 url="https://api.xky.com/get_device_list"
 params='{
@@ -349,6 +376,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## getDevice
 * **方法：** `get`
@@ -362,8 +390,9 @@ params='{
  session | string | 登录标识，在登录接口获取
  source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo15">
 <apidemo
 url="https://api.xky.com/get_device"
 params='{
@@ -373,6 +402,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## getDeviceDebug
 * **方法：** `get`
@@ -386,8 +416,9 @@ params='{
  session | string | 登录标识，在登录接口获取
  source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo16">
 <apidemo
 url="https://api.xky.com/get_device_debug"
 params='{
@@ -397,6 +428,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## getDevDevice
 * **方法：** `get`
@@ -404,8 +436,9 @@ params='{
 * **说明：** 获取默认调试设备的信息,包括设备的连接信息
 * **参数：** null
 
-例子：
+* **例子：**
 
+<div id="demo17">
 <apidemo
 url="https://api.xky.com/get_dev_device"
 params='{
@@ -414,6 +447,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 
 ## setDevice
@@ -431,8 +465,9 @@ tags | Array  | 设备的标签
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo18">
 <apidemo
 url="https://api.xky.com/set_device"
 params='{
@@ -448,6 +483,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## delDevice
 * **方法：** `post`
@@ -461,8 +497,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo19">
 <apidemo
 url="https://api.xky.com/del_device"
 params='{
@@ -472,6 +509,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## setDevDevice
 * **方法：** `post`
@@ -485,8 +523,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo20">
 <apidemo
 url="https://api.xky.com/set_dev_device"
 params='{
@@ -496,6 +535,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## getMultiDevice
 * **方法：** `get`
@@ -508,8 +548,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo21">
 <apidemo
 url="https://api.xky.com/get_multi_device"
 params='{
@@ -518,6 +559,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 
 ## setMultiDevice
@@ -532,8 +574,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo22">
 <apidemo
 url="https://api.xky.com/set_multi_device"
 params='{
@@ -546,6 +589,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## addModule
 * **方法：** `post`
@@ -566,8 +610,9 @@ tags | array | 模块的标签
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo23">
 <apidemo
 url="https://api.xky.com/add_module"
 params='{
@@ -586,6 +631,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## setModule
 * **方法：** `post`
@@ -607,8 +653,9 @@ tags | array | 模块的标签
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo24">
 <apidemo
 url="https://api.xky.com/set_module"
 params='{
@@ -628,6 +675,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## updateModule
 * **方法：** `post`
@@ -649,8 +697,9 @@ tags | array | 模块的标签
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo25">
 <apidemo
 url="https://api.xky.com/update_module"
 params='{
@@ -670,6 +719,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## publishModule
 * **方法：** `post`
@@ -684,8 +734,9 @@ price | number | 模块的价格
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo26">
 <apidemo
 url="https://api.xky.com/publish_module"
 params='{
@@ -696,6 +747,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## delModule
 * **方法：** `post`
@@ -709,8 +761,9 @@ id | string | 模块的id,可在模块列表里面获取
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo27">
 <apidemo
 url="https://api.xky.com/del_module"
 params='{
@@ -720,6 +773,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## getModuleList
 * **方法：** `get`
@@ -739,8 +793,9 @@ sortType | string | "createTime"：通过创建时间来排序
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo28">
 <apidemo
 url="https://api.xky.com/get_module_list"
 params='{
@@ -756,6 +811,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## getModuleTags
 * **方法：** `get`
@@ -768,8 +824,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo29">
 <apidemo
 url="https://api.xky.com/get_module_tags"
 params='{
@@ -778,6 +835,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## getModulePanel
 * **方法：** `get`
@@ -790,8 +848,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo30">
 <apidemo
 url="https://api.xky.com/get_module_panel"
 params='{
@@ -800,6 +859,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## setModuleSort
 * **方法：** `post`
@@ -813,8 +873,9 @@ sort | array | 模块排列顺序的数组
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo31">
 <apidemo
 url="https://api.xky.com/set_module_sort"
 params='{
@@ -829,6 +890,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## getModulePackageList
 * **方法：** `get`
@@ -841,8 +903,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo32">
 <apidemo
 url="https://api.xky.com/get_module_package_list"
 params='{
@@ -851,6 +914,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## syncModulePackage
 * **方法：** `get`
@@ -864,8 +928,9 @@ id | string | 模块包的id,可在模块包列表里面获取
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo33">
 <apidemo
 url="https://api.xky.com/sync_module_package"
 params='{
@@ -875,6 +940,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 
 ## materialsList
@@ -888,8 +954,9 @@ params='{
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo34">
 <apidemo
 url="https://api.xky.com/materials/list"
 params='{
@@ -898,6 +965,7 @@ params='{
 }'
 :isget="true">
 </apidemo>
+</div>
 
 ## materialsAdd
 * **方法：** `post`
@@ -912,8 +980,9 @@ desc | string | 素材库的描述
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo35">
 <apidemo
 url="https://api.xky.com/materials/add"
 params='{
@@ -924,6 +993,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## materialsInsert
 * **方法：** `post`
@@ -940,8 +1010,9 @@ attribute1 | string | 素材属性
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo36">
 <apidemo
 url="https://api.xky.com/materials/insert"
 params='{
@@ -954,6 +1025,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## materialsQuery
 * **方法：** `post`
@@ -969,8 +1041,9 @@ number | number | 获取素材的个数
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo37">
 <apidemo
 url="https://api.xky.com/materials/query"
 params='{
@@ -982,6 +1055,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 
 
@@ -1000,9 +1074,9 @@ attribute1 | string | 素材属性，可以添加多个
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
-<apidemo
+<div id="demo38">
 url="https://api.xky.com/materials/update"
 params='{
     "id": "119",
@@ -1015,6 +1089,7 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 
 ## materialsDelIds
 * **方法：** `post`
@@ -1029,8 +1104,9 @@ ids | array | 素材的id,可在查询单个素材列表里获取
 session | string | 登录标识，在登录接口获取
 source | boolean | 返回的结果是否解密
 
-例子：
+* **例子：**
 
+<div id="demo39">
 <apidemo
 url="https://api.xky.com/materials/del_ids"
 params='{
@@ -1041,4 +1117,5 @@ params='{
 }'
 :isget="false">
 </apidemo>
+</div>
 

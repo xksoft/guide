@@ -18,9 +18,10 @@ subaccount | string | When the account of the sub-control is empty, log in to th
 password | string | Login password
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo1">
+<enapidemo
 url="https://api.xky.com/login"
 params='{
   "key": "xky",
@@ -30,7 +31,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## logout
 * **Method:** `post`
@@ -43,16 +45,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo2">
+<enapidemo
 url="https://api.xky.com/logout"
 params='{
     "session":"",
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## addSubaccount
 * **Method:** `post`
@@ -68,9 +72,10 @@ description | string | Remarks
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo3">
+<enapidemo
 url="https://api.xky.com/add_subaccount"
 params='{
     "account": "xiakeyun",
@@ -80,7 +85,8 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getSubaccountList
 * **Method:** `get`
@@ -93,16 +99,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo4">
+<enapidemo
 url="https://api.xky.com/get_subaccount_list"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getSubaccount
 * **Method:** `get`
@@ -116,9 +124,10 @@ id | string | The id of the sub-control account can be obtained from the list of
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo5">
+<enapidemo
 url="https://api.xky.com/get_subaccount"
 params='{
     "id":"1",
@@ -126,7 +135,8 @@ params='{
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## setSubaccount
 * **Method:** `post`
@@ -143,9 +153,10 @@ devices | array |An array of serial numbers of the device, the serial number can
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo6">
+<enapidemo
 url="https://api.xky.com/set_subaccount"
 params='{
      "id": "1",
@@ -159,7 +170,8 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## deleteSubaccount
 * **Method:** `get`
@@ -173,9 +185,10 @@ id | string | The id of the sub-control account can be obtained from the list of
 session | string | A login status identifier that can be obtained from the returned results of the Login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo7">
+<enapidemo
 url="https://api.xky.com/delete_subaccount"
 params='{
     "id":"1",
@@ -183,7 +196,8 @@ params='{
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 
 ## getTempSession
@@ -197,16 +211,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo8">
+<enapidemo
 url="https://api.xky.com/get_temp_session"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getUser
 * **Method:** `get`
@@ -219,16 +235,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo9">
+<enapidemo
 url="https://api.xky.com/get_user"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## addNode
 * **Method:** `post`
@@ -243,9 +261,10 @@ name | string | The name of the node server
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo10">
+<enapidemo
 url="https://api.xky.com/add_node"
 params='{
   "serial": "12345678901234567890123456789012",
@@ -254,7 +273,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getNodeList
 * **Method:** `get`
@@ -267,16 +287,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo11">
+<enapidemo
 url="https://api.xky.com/get_node_list"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## setNode
 * **Method:** `post`
@@ -291,9 +313,10 @@ name | string | The name of the node server
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo12">
+<enapidemo
 url="https://api.xky.com/set_node"
 params='{
   "id": "11",
@@ -302,7 +325,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## delNode
 * **Method:** `post`
@@ -316,9 +340,10 @@ Arguments | Type | Description
  session | string | A login status identifier that can be obtained from the returned results of the login API.
  source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo13">
+<enapidemo
 url="https://api.xky.com/del_node"
 params='{
   "id": "11",
@@ -326,7 +351,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getDeviceList
 * **Method:** `get`
@@ -339,16 +365,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo14">
+<enapidemo
 url="https://api.xky.com/get_device_list"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getDevice
 * **Method:** `get`
@@ -362,9 +390,10 @@ Arguments | Type | Description
  session | string | A login status identifier that can be obtained from the returned results of the login API.
  source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo15">
+<enapidemo
 url="https://api.xky.com/get_device"
 params='{
   "sn": "7445ee3a",
@@ -372,7 +401,8 @@ params='{
   "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getDeviceDebug
 * **Method:** `get`
@@ -386,9 +416,10 @@ Arguments | Type | Description
  session | string | A login status identifier that can be obtained from the returned results of the login API.
  source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo16">
+<enapidemo
 url="https://api.xky.com/get_device_debug"
 params='{
   "sn": "7445ee3a",
@@ -396,7 +427,8 @@ params='{
   "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getDevDevice
 * **Method:** `get`
@@ -404,16 +436,18 @@ params='{
 * **Description:** Get information about the default debugging device, including connection information for the device.
 * **Arguments:** null
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo17">
+<enapidemo
 url="https://api.xky.com/get_dev_device"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 
 ## setDevice
@@ -431,9 +465,10 @@ tags | Array  | Tags of the device
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo18">
+<enapidemo
 url="https://api.xky.com/set_device"
 params='{
   "sn": "7445ee3a",
@@ -447,7 +482,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## delDevice
 * **Method:** `post`
@@ -461,9 +497,10 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo19">
+<enapidemo
 url="https://api.xky.com/del_device"
 params='{
   "sn": "337de7c5",
@@ -471,7 +508,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## setDevDevice
 * **Method:** `post`
@@ -485,9 +523,10 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo20">
+<enapidemo
 url="https://api.xky.com/set_dev_device"
 params='{
   "sn": "337de7c5",
@@ -495,7 +534,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getMultiDevice
 * **Method:** `get`
@@ -508,16 +548,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo21">
+<enapidemo
 url="https://api.xky.com/get_multi_device"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 
 ## setMultiDevice
@@ -532,9 +574,10 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo22">
+<enapidemo
 url="https://api.xky.com/set_multi_device"
 params='{
    "sns": [
@@ -545,7 +588,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## addModule
 * **Method:** `post`
@@ -566,9 +610,10 @@ tags | array | Module tags
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo23">
+<enapidemo
 url="https://api.xky.com/add_module"
 params='{
    "name": "I am a new module",
@@ -585,7 +630,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## setModule
 * **Method:** `post`
@@ -607,9 +653,10 @@ tags | array | Module tags
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo24">
+<enapidemo
 url="https://api.xky.com/set_module"
 params='{
    "id": "608",
@@ -627,7 +674,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## updateModule
 * **Method:** `post`
@@ -649,9 +697,10 @@ tags | array | Module tags
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo25">
+<enapidemo
 url="https://api.xky.com/update_module"
 params='{
    "id": "608",
@@ -669,7 +718,8 @@ params='{
   "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## publishModule
 * **Method:** `post`
@@ -684,9 +734,10 @@ price | number | Module price
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo26">
+<enapidemo
 url="https://api.xky.com/publish_module"
 params='{
     "id": "1",
@@ -695,7 +746,8 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## delModule
 * **Method:** `post`
@@ -709,9 +761,10 @@ id | string | The module's id can be obtained from the returned result of the ge
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo27">
+<enapidemo
 url="https://api.xky.com/del_module"
 params='{
     "id": "608",
@@ -719,7 +772,8 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getModuleList
 * **Method:** `get`
@@ -739,9 +793,10 @@ sortType | string | The default value is "createTime" which means sorting by cre
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo28">
+<enapidemo
 url="https://api.xky.com/get_module_list"
 params='{
     "uid":"934",
@@ -755,7 +810,8 @@ params='{
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getModuleTags
 * **Method:** `get`
@@ -768,16 +824,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo29">
+<enapidemo
 url="https://api.xky.com/get_module_tags"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getModulePanel
 * **Method:** `get`
@@ -790,16 +848,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo30">
+<enapidemo
 url="https://api.xky.com/get_module_panel"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## setModuleSort
 * **Method:** `post`
@@ -813,9 +873,10 @@ sort | array | Array of module ordering
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo31">
+<enapidemo
 url="https://api.xky.com/set_module_sort"
 params='{
      "sort": [
@@ -828,7 +889,8 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## getModulePackageList
 * **Method:** `get`
@@ -841,16 +903,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo32">
+<enapidemo
 url="https://api.xky.com/get_module_package_list"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## syncModulePackage
 * **Method:** `get`
@@ -864,9 +928,10 @@ id | string | The id of the module package can be obtained from the returned res
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo33">
+<enapidemo
 url="https://api.xky.com/sync_module_package"
 params='{
     "id":"10",
@@ -874,7 +939,8 @@ params='{
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 
 ## materialsList
@@ -888,16 +954,18 @@ Arguments | Type | Description
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo34">
+<enapidemo
 url="https://api.xky.com/materials/list"
 params='{
     "session":"",
     "source": true
 }'
 :isget="true">
-</apidemo>
+</enapidemo>
+</div>
 
 ## materialsAdd
 * **Method:** `post`
@@ -912,9 +980,10 @@ desc | string | The description of the material library
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo35">
+<enapidemo
 url="https://api.xky.com/materials/add"
 params='{
     "name": "test",
@@ -923,7 +992,8 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## materialsInsert
 * **Method:** `post`
@@ -940,9 +1010,10 @@ attribute1 | string | Material attribute
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo36">
+<enapidemo
 url="https://api.xky.com/materials/insert"
 params='{
     "mid": "97",
@@ -953,7 +1024,8 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## materialsQuery
 * **Method:** `post`
@@ -969,9 +1041,10 @@ number | number | Get the number of clips
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo37">
+<enapidemo
 url="https://api.xky.com/materials/query"
 params='{
     "mid": "97",
@@ -981,7 +1054,8 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 
 
@@ -1000,9 +1074,10 @@ attribute1 | string | Material properties, you can add multiple.
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo38">
+<enapidemo
 url="https://api.xky.com/materials/update"
 params='{
     "id": "119",
@@ -1014,7 +1089,8 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
 ## materialsDelIds
 * **Method:** `post`
@@ -1029,9 +1105,10 @@ ids | array |The id of the clip can be obtained from the returned results of the
 session | string | A login status identifier that can be obtained from the returned results of the login API.
 source | boolean | Whether to decrypt the returned result
 
-例子：
+* **Usage:**
 
-<apidemo
+<div id="endemo39">
+<enapidemo
 url="https://api.xky.com/materials/del_ids"
 params='{
     "mid": "97",
@@ -1040,5 +1117,6 @@ params='{
     "source": true
 }'
 :isget="false">
-</apidemo>
+</enapidemo>
+</div>
 
