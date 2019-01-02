@@ -13,7 +13,7 @@
             </el-tab-pane>
             <el-tab-pane label="运行结果" name="second">
                 <div class="language-javascript extra-class demotext">
-                    <pre><code v-html="highlightCode"></code></pre>
+                    <pre style="margin: 0;"><code v-html="highlightCode"></code></pre>
                 </div>
                 <p>{{request_time}}</p>
             </el-tab-pane>
