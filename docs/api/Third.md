@@ -146,6 +146,6 @@ pageClass: third-page
 ##实现原理
 运行在侠客云系统下的安卓设备默认会开放一个8888端口，这是设备与节点服务器沟通的桥梁，通过socketio方式连接可以实现信息交互和广播，主要用于hook及第三方app与侠客云通讯。
 
-测试app源码 => https://static.xky.com/download/ffmbeg_libs.rar
+测试app源码 : https://static.xky.com/download/MyApplication3.rar
 
 侠客云模块中调用方法可参考[callApi调用第三方模块接口](/api/ModuleApi.html#callapi)。
