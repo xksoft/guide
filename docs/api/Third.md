@@ -7,7 +7,7 @@ pageClass: third-page
 
 侠客云默认系统只提供非root权限下的操作，有一些特殊功能可能需要root权限或者xposed框架，这种情况下可以按照以下规范开放api给侠客云调用
 
-只需要在自己的apk或者xposed模块中实现实现一下代码即可跟侠客云交互
+只需要在自己的apk或者xposed模块中实现实现以下代码即可跟侠客云交互
 ```java
     //获取当前设备sn号
     public static String getSn() throws IOException {
@@ -116,7 +116,7 @@ pageClass: third-page
         Log.i("mylog", log);
     }
 
-    //连接
+    //连接 (测试按钮)
     public void btn_click(View view) {
         try {
             connectEventServer("test01");
@@ -125,7 +125,7 @@ pageClass: third-page
         }
     }
 
-    //发送广播
+    //发送广播 (测试按钮)
     public void btn_click2(View view) {
         if (SocketIO.connected()) {
             JSONObject json = new JSONObject();
@@ -145,5 +145,7 @@ pageClass: third-page
 
 ##实现原理
 运行在侠客云系统下的安卓设备默认会开放一个8888端口，这是设备与节点服务器沟通的桥梁，通过socketio方式连接可以实现信息交互和广播，主要用于hook及第三方app与侠客云通讯。
+
+测试app源码 => https://static.xky.com/download/ffmbeg_libs.rar
 
 侠客云模块中调用方法可参考[callApi调用第三方模块接口](/api/ModuleApi.html#callapi)。
