@@ -65,21 +65,22 @@ sidebarDepth: 2
 
 代码区块的建立是在每行加上4个空格或者一个制表符（如同写代码一样）。如    
 普通段落：
-
+```
 void main(){    
     printf("欢迎来到侠客！");    
 }    
-
+```
 代码区块：
-
+```
     void main(){
         printf("欢迎来到侠客！");
     }
+```
 
 注意:需要和普通段落之间存在空行。
 
 代码高亮：    
-
+```
     ```html
         <div>Syntax Highlighting</div>
     ```
@@ -87,6 +88,7 @@ void main(){
         var s = "JavaScript syntax highlighting";
         alert(s);
     ```
+```
 效果：
 ```html
     <div>Syntax Highlighting</div>
