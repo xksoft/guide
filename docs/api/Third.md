@@ -148,4 +148,6 @@ pageClass: third-page
 
 测试app源码 : https://static.xky.com/download/MyApplication3.rar
 
+![avatar](https://static.xky.com/download/test01.png)
+
 侠客云模块中调用方法可参考[callApi调用第三方模块接口](/api/ModuleApi.html#callapi)。
