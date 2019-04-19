@@ -467,25 +467,24 @@ await xky.clearApp('com.tencent.mm');//清空微信所有数据
 {errcode: 0, result: ""}
 ```
 
-## callApi
+## callEvent
 
-* **用法：** `xky.callApi(pkname,action,json)`
+* **用法：** `xky.callEvent(name,json)`
 * **说明：** 调用第三方接口Api，更多请参考[调用第三方接口Api开发文档](/api/Third.html)。
 * **参数：**
 
 参数 | 值类型 | 说明
 ------------ | ------------- | -------------
-pkname| string| 第三方app包名或自定义字符串
-action| string| 动作名
+name| string| 自定义名称
 json| json| json格式参数（可选）
 
 例子：
 ```javascript
-await xky.callApi('com.tencent.mm','sendTextMsg',{wxid:'wxid_xxx',msg:'xxxxxx'});
+await xky.callEvent('test',{type:'hello'});
 ```
 返回结果：
 ```javascript
-{errcode: 0, result: "发送成功"}
+{errcode: 0, msg: 'world'}
 ```
 
 ## input
