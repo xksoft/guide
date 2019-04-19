@@ -9,53 +9,141 @@ pageClass: third-page
 
 只需要在自己的apk或者xposed模块中实现实现一下代码即可跟侠客云交互
 ```java
-    private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String action = intent.getStringExtra("action");
-            String json = intent.getStringExtra("json");
-            setResultCode(666);//666是成功标记，必填，否则侠客云不作处理
-            JSONObject jsonObject = new JSONObject();
-            String base64 = "";
-            try {
-                if (null != json) {
-                    jsonObject = new JSONObject(new String(Base64.decode(json.getBytes(), Base64.DEFAULT), "UTF-8"));//将侠客云传过来的字符串解实例成java的json对象
-                }
-
-
-         
-                //处理动作
-                //action是动作名，jsonObject是传参（可选）
-                //这里根据动作名自行实现需要的功能
-
-
-                //重新创建jsonObject，用于反馈结果 必须包含errcode字段，其他字段按需填充
-                jsonObject = new JSONObject();
-                jsonObject.put("errcode", 0);
-                jsonObject.put("msg", action + "调用成功");
-       
-
-                base64 = new String(Base64.encode(jsonObject.toString().getBytes("UTF-8"), Base64.DEFAULT)).replace("\r", "").replace("\n", "");//将json对象编码成base64
-            } catch (Throwable e) {
-                base64 = "eyJlcnJjb2RlIjowLCJtc2ciOiJiYXNlNjQgZXJyb3IifQ==";//返回预编码好的错误信息，无需修改
-            }
-            //设置反馈结果
-            setResultData(base64);
-        }
-
-
-    };
-  ```
-以上代码为广播接收器功能代码，你还需要将他注册到app中才能使用
-  ```java
-      protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        //注册广播接收器
-        //注意：registerReceiver必须获取到Content对象才能注册，如果在xposed中，请在hook onCreate或者onResume 事件中注册
-        registerReceiver(mReceiver, new IntentFilter(getPackageName()));
-
-        setContentView(R.layout.activity_main);
+    //获取当前设备sn号
+    public static String getSn() throws IOException {
+        File file = new File("/data/local/tmp/sn");
+        InputStreamReader read = new InputStreamReader(new FileInputStream(file));
+        BufferedReader bufferedReader = new BufferedReader(read);
+        String lineTxt = bufferedReader.readLine();
+        read.close();
+        return lineTxt;
     }
-```
+
+    //socketio对象
+    private Socket SocketIO;
+
+    //连接事件服务器
+    private void connectEventServer(final String name) throws IOException {
+        if (SocketIO != null)
+            return;
+        final String sn = getSn();
+        IO.Options opts = new IO.Options();
+        opts.forceNew = true;
+        opts.path = "/xky";
+        opts.query = "action=android_event&sn=" + sn + "&name=" + name;
+        opts.reconnection = true;
+        opts.multiplex = true;
+        opts.reconnectionDelay = 3 * 1000;
+        opts.reconnectionAttempts = 99999999;
+        opts.transports = new String[]{"websocket"};
+        try {
+            SocketIO = IO.socket("http://127.0.0.1:8888/", opts);
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        SocketIO.on(com.github.nkzawa.socketio.client.Socket.EVENT_CONNECT, new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                log("连接成功 当前sn：" + sn + " 会话：" + name);
+            }
+        }).on(com.github.nkzawa.socketio.client.Socket.EVENT_DISCONNECT, new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                log("断开了");
+            }
+        }).on(com.github.nkzawa.socketio.client.Socket.EVENT_CONNECT_ERROR, new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                log("连接出错" + args[0].toString());
+            }
+        }).on("event", new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                if (args.length == 2) {
+                    JSONObject json = (org.json.JSONObject) args[0];
+                    Ack ack = (Ack) args[1];
+                    String type = json.optString("type", "none");
+                    JSONObject result = new JSONObject();
+                    log("收到指令:" + type);
+                    switch (type) {
+                        //根据不同的type实现你不同的接口
+                        case "hello": {
+                            try {
+                                result.put("msg", "world");
+                                result.put("errcode", 0);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            ack.call(result);
+                            break;
+                        }
+                        default:
+                            try {
+                                result.put("msg", "没有找到这个动作指令");
+                                result.put("errcode", 1);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                            ack.call(result);
+                            break;
+                    }
+                }
+            }
+        });
+        SocketIO.connect();
+    }
+
+    //日志数组
+    private List<String> logs = new ArrayList<>();
+
+    //文本日志
+    private void log(String log) {
+        logs.add(log);
+        if (logs.size() > 10) {
+            logs.remove(0);
+        }
+        final StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < logs.size(); i++) {
+            sb.append(logs.get(i));
+            sb.append("\n");
+        }
+        runOnUiThread(new Runnable() {
+            public void run() {
+                TextView usernameTxt = findViewById(R.id.mytxt);
+                usernameTxt.setText(sb.toString());
+            }
+        });
+        Log.i("mylog", log);
+    }
+
+    //连接
+    public void btn_click(View view) {
+        try {
+            connectEventServer("test01");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //发送广播
+    public void btn_click2(View view) {
+        if (SocketIO.connected()) {
+            JSONObject json = new JSONObject();
+            try {
+                json.put("msg", "testtest");
+                json.put("errcode", 0);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            log("发送了一个事件");
+            SocketIO.emit("event", json);
+        } else {
+            log("发送事件失败，原因：未连接");
+        }
+    }
+  ```
+
+##实现原理
+运行在侠客云系统下的安卓设备默认会开放一个8888端口，这是设备与节点服务器沟通的桥梁，通过socketio方式连接可以实现信息交互和广播，主要用于hook及第三方app与侠客云通讯。
+
 侠客云模块中调用方法可参考[callApi调用第三方模块接口](/api/ModuleApi.html#callapi)。
