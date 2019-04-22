@@ -9,5 +9,8 @@
     "axios": "^0.18.0",
     "codemirror": "^5.42.0",
     "element-ui": "^2.4.11"
+  },
+  "devDependencies": {
+    "vuepress": "^0.14.4"
   }
 }
