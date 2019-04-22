@@ -13,5 +13,7 @@
 
 ## 部署
 
+先把upload.js文件放到当前文件夹下，upload.js文件在\\192.168.1.88\xiake_public\开发文档
+
 `npm run upload` 打包并更新到服务器。
 
