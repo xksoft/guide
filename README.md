@@ -8,7 +8,7 @@
 
 ## 打包
 
-`npm run build` 打包并更新到服务器。
+`npm run build` 打包。
 
 
 ## 部署
